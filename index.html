@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Validation</title>
+</head>
+<body>
+        <div class="main">
+              <form action="" class="form" id="form-1">
+                    <h3>Đăng ký ♥</h3>
+
+                    <div class="form-group ">
+                        <label for="fullname" class="form-label">Tên đầy đủ</label>
+                        <input type="text" name="fullname" rules="required" id="fullname" placeholder="VD: Vũ Trung Hiếu">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" rules="required|email" placeholder="VD: email@domain.com">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input type="password" name="password" id="password" rules="required|min:6" placeholder="Nhập mật khẩu">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Nhập lại mật khẩu">
+                        <span class="form-message"></span>
+                    </div>
+                    <!-- <div class="form-group ">
+                        <label for="password_confirmation" class="form-label">Giới tính</label>
+                        <div class="radio-group">
+                            <div class="horizontal">
+                                <input type="radio" name="gender"  value="male"> <span> Nam</span>  
+                            </div>
+                            <div class="horizontal">
+                                <input type="radio" name="gender"  value="female"> <span> Nữ</span>  
+                            </div>
+                            <div class="horizontal">
+                                <input type="radio" name="gender"  value="other"> <span>Khác</span>  
+                            </div>
+                            
+                        </div>
+                        
+                        <span class="form-message"></span>
+                    </div> -->
+
+
+                    <button type="submit" class="form-btn">Đăng ký</button>
+              </form>
+        </div>
+        <script src="./src/validator.js"></script>
+        <script>
+                Validator('#form-1')
+        </script>
+</body>
+</html>
